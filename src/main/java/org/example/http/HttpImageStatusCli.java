@@ -6,9 +6,7 @@ import java.util.Scanner;
 public class HttpImageStatusCli {
     public void askStatus() {
         int statusCode;
-        Scanner sc = new Scanner(System.in);
-
-        try {
+        try (Scanner sc = new Scanner(System.in)){
             System.out.println("Enter HTTP status code: ");
             statusCode = sc.nextInt();
             try {
